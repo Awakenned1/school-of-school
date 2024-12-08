@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Farming Life{% endblock %}
+
+{% block content %}
+<div class="about-section">
+    <h1 class="about-header">About Us</h1>
+    
+    <div class="about-content">
+        <div class="about-image-grid">
+            
+            <div class="image-item">
+                <img src="{{ url_for('static', filename='images/Ganja Village.jpeg') }}" alt="Our farming team" class="about-image">
+                <div class="image-caption">Our Dedicated Team</div>
+            </div>
+            
+            <div class="image-item">
+                <img src="{{ url_for('static', filename='images/farm.jpeg') }}" alt="Sustainable farming practices" class="about-image">
+                <div class="image-caption">Sustainable Farming in Action</div>
+            </div>
+        </div>
+        
+        <div class="about-text">
+            <div class="text-section">
+                <h2>Our Story</h2>
+                <p>We are passionate farmers dedicated to promoting sustainable agriculture and helping others learn about farming practices that benefit both people and the planet.</p>
+            </div>
+            
+            <div class="text-section">
+                <h2>Our Mission</h2>
+                <p>Our mission is to educate and inspire people to embrace sustainable farming practices and natural living while building a community of like-minded individuals.</p>
+            </div>
+
+            <div class="text-section">
+                <h2>Our Values</h2>
+                <ul class="values-list">
+                    <li>Sustainability First</li>
+                    <li>Community Support</li>
+                    <li>Environmental Stewardship</li>
+                    <li>Education & Innovation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

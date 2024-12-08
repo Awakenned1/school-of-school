@@ -1,0 +1,17 @@
+app/
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   └── images/
+├── templates/
+│   ├── base.html
+│   ├── home.html
+│   ├── blog.html
+│   ├── store.html
+│   ├── about.html
+│   └── contact.html
+├── __init__.py
+├── config.py
+├── models.py   
+├── routes.py
+└── app.py 

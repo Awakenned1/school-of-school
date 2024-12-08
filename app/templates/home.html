@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Ganja Village{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Ganja Village</h1>
+        <p>A sustainable community dedicated to organic farming, natural wellness, and mindful living</p>
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/farm.jpeg') }}" alt="Ganja Village Farm">
+    </div>
+</div>
+
+<div class="featured-section">
+    <h2><i class="fas fa-heart"></i> Our Community Vision</h2>
+    <p>Ganja Village is a thriving community of passionate farmers and healers committed to producing the highest quality organic products while preserving traditional farming practices and promoting holistic wellness.</p>
+</div>
+
+<div class="categories">
+    <div class="category-card">
+        <div class="category-icon">
+            <i class="fas fa-seedling"></i>
+        </div>
+        <h2>Organic Farming</h2>
+        <p>We cultivate a diverse range of organic vegetables and medicinal herbs using sustainable farming practices that protect our soil and environment.</p>
+        <ul class="product-list">
+            <li><i class="fas fa-carrot"></i> Seasonal Vegetables</li>
+            <li><i class="fas fa-leaf"></i> Medicinal Herbs</li>
+            <li><i class="fas fa-spa"></i> Organic Seeds</li>
+        </ul>
+    </div>
+    
+    <div class="category-card">
+        <div class="category-icon">
+            <i class="fas fa-mortar-pestle"></i>
+        </div>
+        <h2>Natural Wellness</h2>
+        <p>Discover our carefully cultivated selection of natural wellness products, including medicinal mushrooms and therapeutic herbs.</p>
+        <ul class="product-list">
+            <li><i class="fas fa-mushroom"></i> Medicinal Mushrooms</li>
+            <li><i class="fas fa-prescription-bottle-medical"></i> Herbal Remedies</li>
+            <li><i class="fas fa-book-medical"></i> Wellness Workshops</li>
+        </ul>
+    </div>
+    
+    <div class="category-card">
+        <div class="category-icon">
+            <i class="fas fa-cannabis"></i>
+        </div>
+        <h2>Cannabis Cultivation</h2>
+        <p>Learn about our responsible and sustainable cannabis growing practices, focused on quality and environmental stewardship.</p>
+        <ul class="product-list">
+            <li><i class="fas fa-leaf"></i> Organic Methods</li>
+            <li><i class="fas fa-recycle"></i> Sustainable Practices</li>
+            <li><i class="fas fa-graduation-cap"></i> Educational Resources</li>
+        </ul>
+    </div>
+</div>
+
+<div class="community-section">
+    <h2><i class="fas fa-users"></i> Join Our Community</h2>
+    <div class="community-grid">
+        <div class="community-card">
+            <div class="community-icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h3>Educational Workshops</h3>
+            <p>Join our regular workshops on organic farming, natural medicine, and sustainable living practices.</p>
+        </div>
+        <div class="community-card">
+            <div class="community-icon">
+                <i class="fas fa-store"></i>
+            </div>
+            <h3>Farmers Market</h3>
+            <p>Visit our weekly farmers market to purchase fresh organic produce and natural wellness products.</p>
+        </div>
+        <div class="community-card">
+            <div class="community-icon">
+                <i class="fas fa-hands-helping"></i>
+            </div>
+            <h3>Volunteer Programs</h3>
+            <p>Get involved in our community gardens and learn hands-on farming techniques.</p>
+        </div>
+    </div>
+</div>
+
+<div class="cta-section">
+    <div class="cta-content">
+        <h2><i class="fas fa-heart-pulse"></i> Experience Natural Living</h2>
+        <p>Join us in our mission to promote health, wellness, and sustainable living through natural farming practices.</p>
+        <a href="{{ url_for('main.contact') }}" class="cta-button">
+            <i class="fas fa-paper-plane"></i> Contact Us Today
+        </a>
+    </div>
+</div>
+{% endblock %}

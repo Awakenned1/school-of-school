@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Farming Website{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-leaf"></i> Omchenge
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('main.home') }}"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="{{ url_for('main.blog') }}"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="{{ url_for('main.store') }}"><i class="fas fa-store"></i> Store</a></li>
+            <li><a href="{{ url_for('main.about') }}"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="{{ url_for('main.contact') }}"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="flash-message">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Omchenge. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
